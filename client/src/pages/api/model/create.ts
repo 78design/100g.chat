@@ -24,8 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const authCount = await Model.countDocuments({
       userId
     });
-    if (authCount >= 50) {
-      throw new Error('上限 50 个应用');
+    if (authCount >= 100) {
+      throw new Error('上限 100 个应用');
     }
 
     // 创建模型
